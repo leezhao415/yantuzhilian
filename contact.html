@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 - 研途智联科技有限公司</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 添加Axios库 -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <div id="navbar-container"></div>
+
+  <!-- 页面标题 -->
+  <div class="bg-primary text-white py-5">
+    <div class="container">
+      <h1>联系我们</h1>
+      <p class="lead">随时与我们取得联系，我们期待为您提供服务</p>
+    </div>
+  </div>
+
+  <!-- 联系信息 -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <h2 class="section-title">联系方式</h2>
+        <div class="mt-4">
+          <div class="d-flex mb-4">
+            <div class="flex-shrink-0">
+              <i class="bi bi-geo-alt fs-2 text-primary"></i>
+            </div>
+            <div class="ms-3">
+              <h5>公司地址</h5>
+              <p>安徽省合肥市高新区创新产业园123号</p>
+            </div>
+          </div>
+          
+          <div class="d-flex mb-4">
+            <div class="flex-shrink-0">
+              <i class="bi bi-telephone fs-2 text-primary"></i>
+            </div>
+            <div class="ms-3">
+              <h5>联系电话</h5>
+              <p>024-12345678</p>
+            </div>
+          </div>
+          
+          <div class="d-flex mb-4">
+            <div class="flex-shrink-0">
+              <i class="bi bi-envelope fs-2 text-primary"></i>
+            </div>
+            <div class="ms-3">
+              <h5>电子邮箱</h5>
+              <p>info@YanTuZhiLian.com</p>
+            </div>
+          </div>
+          
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <i class="bi bi-clock fs-2 text-primary"></i>
+            </div>
+            <div class="ms-3">
+              <h5>工作时间</h5>
+              <p>周一至周五: 9:00 - 18:00<br>周六、周日: 休息</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <h2 class="section-title">在线留言</h2>
+        <p>如果您有任何问题或需求，请填写以下表单，我们会尽快与您联系。</p>
+        
+        <form id="messageForm" class="mt-4">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">姓名 <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            
+            <div class="col-md-6">
+              <label for="company" class="form-label">公司名称</label>
+              <input type="text" class="form-control" id="company" name="company">
+            </div>
+            
+            <div class="col-md-6">
+              <label for="email" class="form-label">电子邮箱</label>
+              <input type="email" class="form-control" id="email" name="email">
+            </div>
+            
+            <div class="col-md-6">
+              <label for="phone" class="form-label">联系电话</label>
+              <input type="tel" class="form-control" id="phone" name="phone">
+            </div>
+            
+            <div class="col-12">
+              <label for="message" class="form-label">留言内容 <span class="text-danger">*</span></label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary btn-lg">提交留言</button>
+              <div id="messageResult" class="mt-3"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 地图 -->
+  <section class="container-fluid p-0 mb-5">
+    <div class="row g-0">
+      <div class="col-12">
+        <h2 class="text-center mb-4">公司位置</h2>
+        <div class="map-container">
+          <iframe src="https://map.baidu.com/poi/%E6%B2%88%E9%98%B3%E5%B8%82%E6%B5%91%E5%8D%97%E5%8C%BA/@13147851.095,4843567.68,15.46z?uid=fa3e7f0a5c913f4cde9d70cd&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&newfrom=zhuzhan_webmap&querytype=detl&da_src=shareurl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>联系我们</h5>
+          <p><i class="bi bi-geo-alt"></i> 地址：安徽省合肥市高新区创新产业园123号</p>
+          <p><i class="bi bi-telephone"></i> 电话：024-12345678</p>
+          <p><i class="bi bi-envelope"></i> 邮箱：info@YanTuZhiLian.com</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>快速链接</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">首页</a></li>
+            <li><a href="about.html" class="text-white">关于我们</a></li>
+            <li><a href="products.html" class="text-white">产品服务</a></li>
+            <li><a href="news.html" class="text-white">新闻动态</a></li>
+            <li><a href="contact.html" class="text-white">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>关注我们</h5>
+          <div class="d-flex gap-3 fs-4">
+            <a href="#" class="text-white"><i class="bi bi-wechat"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-weibo"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+          </div>
+          <div class="mt-3">
+            <img src="https://via.placeholder.com/120x120?text=WeChat+QR" alt="微信公众号" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p>© 2025 研途智联科技有限公司 版权所有 | 辽ICP备XXXXXXXX号</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- 留言表单处理脚本 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const messageForm = document.getElementById('messageForm');
+      const messageResult = document.getElementById('messageResult');
+      
+      if (messageForm) {
+        messageForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          // 获取表单数据
+          const name = document.getElementById('name').value;
+          const company = document.getElementById('company').value;
+          const email = document.getElementById('email').value;
+          const phone = document.getElementById('phone').value;
+          const message = document.getElementById('message').value;
+          
+          // 显示加载状态
+          messageResult.innerHTML = '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div> 正在提交...';
+          
+          // 发送请求到服务器
+          axios.post('https://xp3g9odg82.hzh.sealos.run/message', {
+            name,
+            company,
+            email,
+            phone,
+            message
+          })
+          .then(function (response) {
+            if (response.data.ok) {
+              // 创建成功提示元素
+              messageResult.innerHTML = `
+                <div class="alert alert-success">
+                  <h5>留言提交成功！</h5>
+                  <p>尊敬的 ${name}，感谢您的留言。我们会尽快与您联系。</p>
+                </div>
+              `;
+              
+              // 清空表单
+              messageForm.reset();
+            } else {
+              messageResult.innerHTML = `
+                <div class="alert alert-danger">
+                  <h5>提交失败</h5>
+                  <p>${response.data.error || '服务器错误，请稍后重试'}</p>
+                </div>
+              `;
+            }
+          })
+          .catch(function (error) {
+            console.error('提交留言失败:', error);
+            messageResult.innerHTML = `
+              <div class="alert alert-danger">
+                <h5>提交失败</h5>
+                <p>网络错误，请稍后重试</p>
+              </div>
+            `;
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html> 
